@@ -1,7 +1,18 @@
 <div class="col-md-4">
     <?php
+    include "db.php";
     if(isset($_POST['submit'])){
         $search = $_POST['search'];
+        $query = "SELECT * FROM posts WHERE post_tag LIKE '%$search%'";
+        $searchQuery = mysqli_query($connection, $query);
+
+        if(!$searchQuery){
+            die("QUERY FAILED" . mysqli_error($connection));
+        }
+        $count = mysqli_num_rows($searchQuery);
+        if($count != 0){
+            echo "No result!";
+        }
     }
 
     ?>

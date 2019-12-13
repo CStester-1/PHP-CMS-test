@@ -1,4 +1,4 @@
-<<?php include "includes/db.php"; ?>
+<<?php include "db.php"; ?>
 
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
